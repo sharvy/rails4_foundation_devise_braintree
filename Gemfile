@@ -17,4 +17,6 @@ group :development, :test do
 end
 
 gem 'foundation-rails'
-
+gem 'devise'
+gem 'redis', '~> 3.0.1'
+gem 'hiredis', '~> 0.4.5'
