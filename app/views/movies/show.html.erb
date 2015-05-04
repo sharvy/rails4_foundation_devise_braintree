@@ -7,7 +7,7 @@
     <%= @movie.title %>
     (<%= @movie.release_year %>)
     <%= link_to @movie.imdb do %>
-        <%= image_tag asset_path("imdb_logo.png") %>
+        <%= image_tag asset_path("imdb_logo.png"), width: '100' %>
     <% end %>
   </h3>
 
@@ -15,7 +15,7 @@
 
   <p><%= @movie.description %></p>
   <% if signed_in? %>
-      <%= link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@movie), removeUrl: remove_from_cart_path(@movie)} do %>
+      <%= link_to '', class: "button", data: {target: @cart_action, add_url: add_to_cart_path(@movie), remove_url: remove_from_cart_path(@movie)} do %>
           <i class="fi-shopping-cart"></i>
           <span><%= @cart_action %></span> Cart
       <% end %>
